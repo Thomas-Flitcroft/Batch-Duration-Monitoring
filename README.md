@@ -51,7 +51,7 @@ This Page allows users to view the batch duration information of a selected clie
 - Graph to show clients with more than 1 day since their most recent batch run
   - Indicating recent failed batches that need to be investigated by the support team
 
-  ## Generating the data
+  ## Generating The Data
 
 - Firstly, we need to generate a list of fake clients for FakeCompany Plc. This is done using the Python script ```scraper.py``` to scrape a list of the top 100 companies in the US from this Wikipedia article: [https://en.wikipedia.org/wiki/List\_of\_largest\_companies\_in\_the\_United\_States\_by\_revenue](https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue) .
 
