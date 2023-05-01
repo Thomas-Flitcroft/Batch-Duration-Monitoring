@@ -25,13 +25,13 @@ Data for each batch run (Client, Batch Run Date, Duration) is stored in an SQL d
 
 The report consists of 2 pages:
 
-1. **Client Investigation**
+### 1. Client Investigation
 
 ![Client Investigation Page](Demo/client_investigation.PNG)
 
 This Page allows users to view the batch duration information of a selected client within a selected date range.
 
-Features:
+**Features:**
 
 - Date slider to select specific date ranges
 - Option to switch between hour or minute measurements of batch durations
@@ -41,11 +41,11 @@ Features:
 - Tiles showing information specific to the client
   - Time since latest batch run, AWS Instance Size, Average Daily Sales
 
-2. **Monitoring**
+### 2. Monitoring
 
 ![Monitoring Page](Demo/monitoring.PNG)
 
-Features:
+**Features:**
 
 - Shows clients who have had recent batch runs much longer than the recent average run time.
   - Indicating extremely large batch runs that should be investigated
