@@ -4,7 +4,7 @@ This project is largely based on a PowerBi report that I built in my current rol
 
 As I am unable to use the real batch data from my company, I have used Python to generate fake data to use in the PowerBI report.
 
-
+![demonstration](Demo/Demo.gif)
 ## Narrative
 
 FakeCompany Plc is an SaaS B2B company that provides ground-breaking analysis of their client's sales data to help guide the client's business decisions and ultimately drive success.
@@ -15,7 +15,6 @@ These batch processes are critical to the success of FakeCompany Plc. FakeCompan
 
 Data for each batch run (Client, Batch Run Date, Duration) is stored in an SQL database which is connected to the PowerBI report shown below. The report allows the client support team to monitor in real-time and locate and react to any issues ASAP.
 
-![demonstration](Demo/Demo.gif)
 ## Tools and Libraries Used
 
 - Webscraping was done using Python (Pandas)
@@ -55,23 +54,29 @@ This Page allows users to view the batch duration information of a selected clie
 
   ## Generating the data
 
-Firstly, I needed to generate a list of fake clients for FakeCompany Plc. I did this by using Python to scrape a list of the top 100 companies in the US from this Wikipedia article: [https://en.wikipedia.org/wiki/List\_of\_largest\_companies\_in\_the\_United\_States\_by\_revenue](https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue) .
+Firstly, I needed to generate a list of fake clients for FakeCompany Plc. I did this by using the Python script ```scraper.py``` to scrape a list of the top 100 companies in the US from this Wikipedia article: [https://en.wikipedia.org/wiki/List\_of\_largest\_companies\_in\_the\_United\_States\_by\_revenue](https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue) .
 
 For each company in the list,
 
 Then, I calculated average
 
-1. The number of daily sales to be processed.
+**1. The number of daily sales to be processed.**
 
 - The more sales data that needs to be processed, the longer the batch run time.
 
-2. The size of the AWS instance.
+**2. The size of the AWS instance.**
 
 - Larger, more powerful AWS instances drastically decrease batch run time.
 
-3. The time since the first batch run
+**3. The time since the first batch run**
 
 - Summaries of each batch run are saved and re-processed in subsequent batch runs to analyse new data against old data. As time goes on, the amount of historical data that needs to be re-processed grows, which increases the batch run time.
+
+
+Each client is assigned a random 'start date' for their first ever batch between 2022-10-01 and 2023-02-01
+
+The daily batch durations are then generated for each client using the initial batch duration combined with a randomly selected mathematical function from ```increasing_functions.py```. These functions simulate the natural increase over time of the batch run duration (**point 3** above).
+
 
 ## Usage
 
