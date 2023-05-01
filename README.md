@@ -53,28 +53,40 @@ This Page allows users to view the batch duration information of a selected clie
 
   ## Generating the data
 
-- Firstly, I needed to generate a list of fake clients for FakeCompany Plc. I did this by using the Python script ```scraper.py``` to scrape a list of the top 100 companies in the US from this Wikipedia article: [https://en.wikipedia.org/wiki/List\_of\_largest\_companies\_in\_the\_United\_States\_by\_revenue](https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue) .
+- Firstly, we need to generate a list of fake clients for FakeCompany Plc. This is done using the Python script ```scraper.py``` to scrape a list of the top 100 companies in the US from this Wikipedia article: [https://en.wikipedia.org/wiki/List\_of\_largest\_companies\_in\_the\_United\_States\_by\_revenue](https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue) .
 
 - For each company in the list,
 
-- Then, I calculated the initial batch run time based on the following conditions: 
+- Then, I calculate the initial batch run time based on the following conditions: 
 
   - **1. The number of daily sales to be processed.**
 
-  - The more sales data that needs to be processed, the longer the batch run time.
+    - The more sales data that needs to be processed, the longer the batch run time.
 
   - **2. The size of the AWS instance.**
 
-  - Larger, more powerful AWS instances drastically decrease batch run time.
+    - Larger, more powerful AWS instances drastically decrease batch run time.
+    - There are 4 types of AWS instance which reduce the batch run times by the following percentage: 
+
+| AWS Instance Size      | Batch Time Reduction |
+| ----------- | ----------- |
+| Small      | 20%      |
+| Medium   | 50%        |
+| Large  | 80%       |
+| Extra Large  | 95%       |
+
+
 
   - **3. The time since the first batch run**
 
-  - Summaries of each batch run are saved and re-processed in subsequent batch runs to analyse new data against old data. As time goes on, the amount of historical data that needs to be re-processed grows, which increases the batch run time.
+    - Summaries of each batch run are saved and re-processed in subsequent batch runs to analyse new data against old data. As time goes on, the amount of historical data that needs to be re-processed grows, which increases the batch run time.
 
 
-- Each client was assigned a random 'start date' for their first ever batch between 2022-10-01 and 2023-02-01
+- Each client is assigned a random 'start date' for their first ever batch run between 2022-10-01 and 2023-02-01
 
-The daily batch durations are then generated for each client using the initial batch duration combined with a randomly selected mathematical function from ```increasing_functions.py```. These functions simulate the natural increase over time of the batch run duration (**point 3** above).
+- The daily batch durations are then generated for each client using the initial batch duration combined with a randomly selected mathematical function from ```increasing_functions.py```. These functions simulate the natural increase over time of the batch run duration (point **3** above).
+
+- Finally, noise is added to the generated data to stimulate random variation in the batch run times. Large outliers are also randomly added to the data to simulate 'problematic' batch runs that need to be investigated by the support team. 
 
 
 ## Usage
@@ -89,6 +101,8 @@ The daily batch durations are then generated for each client using the initial b
 
 ## Future Improvements
 
-- Making the generated data more 'realistic'
+- Make the generated data more 'realistic'
   - Add 'Succeeded' and 'Failed' status to each batch run to highlight failed batches
   - Improve mathematical functions to increase the batch durations over time
+
+- Add functionality to the report to monitor when a more powerful AWS instance may be required. 
