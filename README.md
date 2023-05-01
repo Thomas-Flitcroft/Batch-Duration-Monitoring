@@ -55,9 +55,9 @@ This Page allows users to view the batch duration information of a selected clie
 
 - Firstly, we need to generate a list of fake clients for FakeCompany Plc. This is done using the Python script ```scraper.py``` to scrape a list of the top 100 companies in the US from this Wikipedia article: [https://en.wikipedia.org/wiki/List\_of\_largest\_companies\_in\_the\_United\_States\_by\_revenue](https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue) .
 
-- For each company in the list,
+- For each company in the list, the 'Average Daily Sales' is randomly generated, as well as the 'AWS Instance Size' which is based on the Average Daily Sales (larger Daily Sales means larger AWS Instance). 
 
-- Then, I calculate the initial batch run time based on the following conditions: 
+- Then, I calculate the first batch run time based on the following conditions: 
 
   - **1. The number of daily sales to be processed.**
 
@@ -66,7 +66,7 @@ This Page allows users to view the batch duration information of a selected clie
   - **2. The size of the AWS instance.**
 
     - Larger, more powerful AWS instances drastically decrease batch run time.
-    - There are 4 types of AWS instance which reduce the batch run times by the below percentages: 
+    - There are 4 types of AWS instance which reduce the batch run times by the below percentages. 
 
    - **3. The time since the first batch run**
 
