@@ -27,7 +27,7 @@ The report consists of 2 pages:
 
 1. **Client Investigation**
 
-![Client Investigation Page](Demo/client_investigation.png)
+![Client Investigation Page](Demo/client_investigation.PNG)
 
 This Page allows users to view the batch duration information of a selected client within a selected date range.
 
@@ -43,7 +43,7 @@ Features:
 
 2. **Monitoring**
 
-![Monitoring Page](Demo/monitoring.png)
+![Monitoring Page](Demo/monitoring.PNG)
 
 Features:
 
