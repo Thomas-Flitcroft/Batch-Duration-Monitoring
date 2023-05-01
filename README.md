@@ -80,7 +80,7 @@ Then, I calculated average
   - This will scrape and download the company data from Wikipedia
 - Run ```generate_data.py```
   - This will generate the fake batch data for the report
-- Read the generated```02_intermediate.csv``` and ```03_final.csv``` into the PowerBI report by changing the source path
+- Read the generated```02_intermediate.csv``` and ```03_final.csv``` into the PowerBI report ```Batch_Durations_Report.pbix``` by changing the source path
 
 ## Future Improvements
 
