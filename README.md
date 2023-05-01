@@ -4,7 +4,7 @@ This is a project largely based on a PowerBi report that I built in my current r
 I am unable to use the real batch data from my company in this project for privacy reasons. As such, I have used Python to generate fake data to use in the PowerBI report.
 
 
-![demonstration](demo/Demo.gif)
+![demonstration](Demo/Demo.gif)
 ## Narrative
 
 FakeCompany Plc is an SaaS B2B company that provides ground-breaking analysis of their client's sales data to help guide the client's business decisions and ultimately drive success.
@@ -27,7 +27,7 @@ The report consists of 2 pages:
 
 1. **Client Investigation**
 
-![Client Investigation Page](demo/client_investigation.png)
+![Client Investigation Page](Demo/client_investigation.png)
 
 This Page allows users to view the batch duration information of a selected client within a selected date range.
 
@@ -43,7 +43,7 @@ Features:
 
 2. **Monitoring**
 
-![Monitoring Page](demo/monitoring.png)
+![Monitoring Page](Demo/monitoring.png)
 
 Features:
 
