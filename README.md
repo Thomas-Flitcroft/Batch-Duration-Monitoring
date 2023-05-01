@@ -76,7 +76,6 @@ This Page allows users to view the batch duration information of a selected clie
 | Extra Large  | 95%       |
 
 
-
   - **3. The time since the first batch run**
 
     - Summaries of each batch run are saved and re-processed in subsequent batch runs to analyse new data against old data. As time goes on, the amount of historical data that needs to be re-processed grows, which increases the batch run time.
