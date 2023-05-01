@@ -66,7 +66,11 @@ This Page allows users to view the batch duration information of a selected clie
   - **2. The size of the AWS instance.**
 
     - Larger, more powerful AWS instances drastically decrease batch run time.
-    - There are 4 types of AWS instance which reduce the batch run times by the following percentage: 
+    - There are 4 types of AWS instance which reduce the batch run times by the below percentages: 
+
+   - **3. The time since the first batch run**
+
+     - Summaries of each batch run are saved and re-processed in subsequent batch runs to analyse new data against old data. As time goes on, the amount of historical data that needs to be re-processed grows, which increases the batch run time.
 
 | AWS Instance Size      | Batch Time Reduction |
 | ----------- | ----------- |
@@ -74,11 +78,6 @@ This Page allows users to view the batch duration information of a selected clie
 | Medium   | 50%        |
 | Large  | 80%       |
 | Extra Large  | 95%       |
-
-
-  - **3. The time since the first batch run**
-
-    - Summaries of each batch run are saved and re-processed in subsequent batch runs to analyse new data against old data. As time goes on, the amount of historical data that needs to be re-processed grows, which increases the batch run time.
 
 
 - Each client is assigned a random 'start date' for their first ever batch run between 2022-10-01 and 2023-02-01
