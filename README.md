@@ -2,8 +2,6 @@
 
 This project is largely based on a PowerBi report that I built in my current role. The PowerBI report allows the client support team to monitor and investigate the batch processes that are vital to the success of the company.
 
-As I am unable to use the real batch data from my company, I have used Python to generate fake data to use in the PowerBI report.
-
 ![demonstration](Demo/Demo.gif)
 ## Narrative
 
