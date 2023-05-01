@@ -3,6 +3,13 @@
 This project is largely based on a PowerBi report that I built in my current role. The PowerBI report allows the client support team to monitor and investigate the batch processes that are vital to the success of the company.
 
 ![demonstration](Demo/Demo.gif)
+
+## Tools and Libraries Used
+
+- Webscraping was done using Python (Pandas)
+- Data generation and manipulation was done using Python (Pandas, Numpy)
+- Reporting / Dashboarding was done using PowerBI and DAX
+
 ## Narrative
 
 FakeCompany Plc is an SaaS B2B company that provides ground-breaking analysis of their client's sales data to help guide the client's business decisions and ultimately drive success.
@@ -12,12 +19,6 @@ Each day, clients send sales data in csv format to FakeCompany Plc, containing i
 These batch processes are critical to the success of FakeCompany Plc. FakeCompany Plc's clients pay a large annual subscription therefore expect reports to be delivered on time each day. Any failures or delays can cause extreme discontent and may harm client relationships. As such, it is important that FakeCompany Plc monitor batch run times to find and resolve any problems before they impact clients.
 
 Data for each batch run (Client, Batch Run Date, Duration) is stored in an SQL database which is connected to the PowerBI report shown below. The report allows the client support team to monitor in real-time and locate and react to any issues ASAP.
-
-## Tools and Libraries Used
-
-- Webscraping was done using Python (Pandas)
-- Data generation and manipulation was done using Python (Pandas, Numpy)
-- Reporting / Dashboarding was done using PowerBI and DAX
 
 ## The PowerBI Report 
 
