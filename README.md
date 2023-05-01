@@ -5,7 +5,6 @@ This project is largely based on a PowerBi report that I built in my current rol
 As I am unable to use the real batch data from my company, I have used Python to generate fake data to use in the PowerBI report.
 
 
-![demonstration](Demo/Demo.gif)
 ## Narrative
 
 FakeCompany Plc is an SaaS B2B company that provides ground-breaking analysis of their client's sales data to help guide the client's business decisions and ultimately drive success.
@@ -16,6 +15,7 @@ These batch processes are critical to the success of FakeCompany Plc. FakeCompan
 
 Data for each batch run (Client, Batch Run Date, Duration) is stored in an SQL database which is connected to the PowerBI report shown below. The report allows the client support team to monitor in real-time and locate and react to any issues ASAP.
 
+![demonstration](Demo/Demo.gif)
 ## Tools and Libraries Used
 
 - Webscraping was done using Python (Pandas)
