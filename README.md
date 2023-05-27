@@ -20,8 +20,6 @@ These batch processes are critical to the success of FakeCompany Plc. FakeCompan
 
 Data for each batch run (Client, Batch Run Date, Duration) is stored in an SQL database which is connected to the PowerBI report shown below. The report allows the client support team to monitor in real-time and locate and react to any issues ASAP.
 
-
-FreshService's [REST API](https://api.freshservice.com/).
 ## The PowerBI Report 
 
 The report consists of 2 pages:
