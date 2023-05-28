@@ -80,7 +80,7 @@ This page allows users to view the batch duration information of a selected clie
 | Extra Large  | 95%       |
 
 
-- Each client is assigned a random 'start date' for their first ever batch run between 2022-10-01 and 2023-02-01
+- Each client is assigned a random 'start date' for their first ever batch run between 2022-10-01 and 2023-02-01.
 
 - The daily batch durations are then generated for each client using the initial batch duration combined with a randomly selected mathematical function from ```increasing_functions.py```. These functions simulate the natural increase over time of the batch run duration (point **3** above).
 
