@@ -9,7 +9,7 @@ from datetime import timedelta
 
 ## Assigns AWS Instance size to a company based on 
 def assign_aws_instance(sales_volume):
-    instance_list = ['Small', 'Medium', 'Large', 'Extra Large']
+    instance_list = ['Small', 'Medium', 'Larg', 'Extra Large']
     #Small Daily Sales Volume
     if sales_volume<5e5:
         return np.random.choice(instance_list, p=[0.65,0.35,0,0])
