@@ -1,6 +1,6 @@
 # Batch Duration Monitoring
 
-This project is largely based on a PowerBi report that I built in my current role. The PowerBI report allows the client support team to monitor and investigate the batch processes that are vital to the success of the company.
+This project is largely based on a PowerBi report that I built in my previous role on the client support team at my firm. The PowerBI report allows the client support team to monitor and investigate the batch processes that are vital to the success of the company.
 
 ![demonstration](Demo/Demo.gif)
 
